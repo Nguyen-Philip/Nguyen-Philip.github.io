@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+  <meta charset = "utf-8">
+  <meta name = "viewport" content = "width=device-width">
+  <title>counter-strike: global offensive</title>
+  <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity = "sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin = "anonymous">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload = "loadUser(), getMode(), checkIfSignedIn()">
+  <div class = "container-fluid">
+    <div class = "row">
+      <header class = "col-sm-8 bg-info text-dark">     
+        <h1 class = "text-start">NOTHING ESPORTS</h1>
+      </header>
+      <header class = "col-sm-4 bg-info text-dark"><br>
+        <div class = "form-check form-switch float-end">
+          <button class = "btn btn-dark" onclick = "toggleMode()" role = "toggleDarkMode" id = "buttonDesign">Toggle Dark Mode</button>
+        </div>
+      </header>
+    </div>
+    <div class = "row">
+      <header class = "col-sm-8 bg-secondary text-white"><br> 
+        <h1 class = "text-start">Counter-Strike: Global Offensive</h1>      
+      </header>
+      <header class = "col-sm-4 bg-secondary text-white"><br> 
+        <button type = "button" class = "bg-success float-end"><a class = "text-white nav-link active" href = "Signup.html" id = "link"><span id = "signup">Sign Up</span></a></button>   
+      </header>
+    </div>
+    <div class = "row">
+      <nav class = "col-sm-12 bg-info text-white navbar navbar-expand-lg navbar-light">
+        <div class = "container-fluid">
+          <img src = "Logos/CSGOLogo.png" class = "img-fluid" alt = "Logo of Counter-Strike: Global Offensive">
+          <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navbarNavDropdown" role = "navbarNavDropdown">
+            <span class = "navbar-toggler-icon"></span>
+          </button>
+        <div class = "collapse navbar-collapse" id = "navbarNavDropdown">
+          <ul class = "navbar-nav">
+            <li class = "nav-item">
+              <a class = "nav-link active" href = "index.html">Home</a>
+            </li>
+            <li class = "nav-item dropdown">
+              <a class = "nav-link dropdown-toggle active" href = "#" id="navbarDropdownMenuLink" role = "navbarDropdownMenuLink" data-bs-toggle = "dropdown">Games</a>
+              <ul class = "dropdown-menu bg-info">
+                <li><a class = "dropdown-item" href = "ApexLegends.html">Apex Legends</a></li>
+                <li><a class = "dropdown-item" href = "CSGO.html">Counter-Strike: Global Offensive</a></li>
+                <li><a class = "dropdown-item" href = "LeagueofLegends.html">League of Legends</a></li>
+              </ul>
+            </li>
+            <li class = "nav-item">
+              <a class = "nav-link active" href = "AboutEsports.html">About Esports</a>
+            </li>
+            <li class = "nav-item">
+              <a class = "nav-link active" href = "Earnings.html">Earnings</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </div>
+    <div class = "row">
+      <main class = "col-sm-6 text-center"><br>
+        <div class = "container-fluid">
+          <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#NaViDropdown" role = "NaViDropdown">
+            <span class = "btn btn-dark">Natus Vincere</span>
+          </button>
+          <div class = "collapse" id = "NaViDropdown">
+            <ul class = "navbar-nav btn btn-dark">
+              <li>
+                s1mple | Alexander Kostylev
+              </li>
+              <li>
+                electronic | Denis Sharipov
+              </li>
+              <li>
+                Boombl4 | Kirill Mikhailov
+              </li>
+              <li>
+                Perfecto | Ilya Zalutskiy
+              </li>
+              <li>
+                B1t | Valeriy Vakhovskiy
+              </li>
+            </ul>
+          </div>
+        </div><br>
+        <div class = "container-fluid">
+          <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#AstralisDropdown" role = "AstralisDropdown">
+            <span class = "btn btn-dark">Astralis</span>
+          </button>
+          <div  class = "collapse" id = "AstralisDropdown">
+            <ul class = "navbar-nav btn btn-dark">
+              <li>
+                Xyp9x | Andreas Højsleth
+              </li>
+              <li>
+                gla1ve | Lukas Rossander
+              </li>
+              <li>
+                Lucky | Philip Ewald
+              </li>
+              <li>
+                k0nfig | Kristian Wienecke
+              </li>
+              <li>
+                blameF | Benjamin Bremer
+              </li>
+            </ul>
+          </div>
+        </div><br>
+        <div class = "container-fluid">
+          <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#C9Dropdown" role = "C9Dropdown">
+            <span class = "btn btn-dark">Cloud 9</span>
+          </button>
+          <div class = "collapse" id = "C9Dropdown">
+            <ul class = "navbar-nav btn btn-dark">
+              <li>
+                Ax1Le | Sergey Rykhtorov	
+              </li>
+              <li>
+                HObbit | Abay Khasenov
+              </li>
+              <li>
+                interz | Timofey Yakushin
+              </li>
+              <li>
+                nafany | Vladislav Gorshkov
+              </li>
+              <li>
+                sh1ro | Dmitry Sokolov
+              </li>
+            </ul>
+          </div>
+        </div><br>
+        <div class = "container-fluid">
+          <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#G2Dropdown" role = "G2Dropdown">
+            <span class = "btn btn-dark">G2 Esports</span>
+          </button>
+          <div class = "collapse" id = "G2Dropdown">
+            <ul class = "navbar-nav btn btn-dark">
+              <li>
+                JaCkz | Audric Jug
+              </li>
+              <li>
+                huNter | Nemanja Kovač
+              </li>
+              <li>
+                NiKo | Nikola Kovač
+              </li>
+              <li>
+                m0NESY | Ilya Osipov
+              </li>
+              <li>
+                Aleksib | Aleksi Virolainen
+              </li>
+            </ul>
+          </div>
+        </div><br>
+      </main>
+      <main class = "col-sm-6 text-center"><br>
+        <div class = "container-fluid">
+          <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#VitDropdown" role = "VitDropdown">
+            <span class = "btn btn-dark">Vitality</span>
+          </button>
+          <div class = "collapse" id = "VitDropdown">
+            <ul class = "navbar-nav btn btn-dark">
+              <li>
+                dupreeh | Peter Rasmussen
+              </li>
+              <li>
+                Magisk | Emil Reif
+              </li>
+              <li>
+                Misutaaa | Kévin Rabier
+              </li>
+              <li>
+                apEX | Dan Madesclaire
+              </li>
+              <li>
+                ZywOo | Mathieu Herbaut
+              </li>
+            </ul>
+          </div>
+        </div><br>
+        <div class = "container-fluid">
+          <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#ninjaDropdown" role = "ninjaDropdown">
+            <span class = "btn btn-dark">Ninjas in Pyjamas</span>
+          </button>
+          <div class = "collapse" id = "ninjaDropdown">
+            <ul class = "navbar-nav btn btn-dark">
+              <li>
+                es3tag | Patrick Hansen
+              </li>
+              <li>
+                dev1ce | Nicolai Reedtz
+              </li>
+              <li>
+                hampus | Hampus Poser
+              </li>
+              <li>
+                Plopski | Nicolas Gonzalez
+              </li>
+              <li>
+                REZ | Fredrik Sterner
+              </li>
+            </ul>
+          </div>
+        </div><br>
+        <div class = "container-fluid">
+          <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#enceDropdown" role = "enceDropdown">
+            <span class = "btn btn-dark">ENCE Esports</span>
+          </button>
+          <div class = "collapse" id = "enceDropdown">
+            <ul class = "navbar-nav btn btn-dark">
+              <li>
+                Spinx | Lotan Giladi
+              </li>
+              <li>
+                Snappi | Marco Pfeiffer
+              </li>
+              <li>
+                dycha | Paul Dycha
+              </li>
+              <li>
+                hades | Olek Miskiewicz
+              </li>
+              <li>
+                Maden | Pavle Bošković	
+              </li>
+            </ul>
+          </div>
+        </div><br>
+        <div class = "container-fluid">
+          <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#furiaDropdown" role = "furiaDropdown">
+            <span class = "btn btn-dark">Furia esports</span>
+          </button>
+          <div class = "collapse" id = "furiaDropdown">
+            <ul class = "navbar-nav btn btn-dark">
+              <li>
+                saffee | Rafael Costa
+              </li>
+              <li>
+                drop | André Abreu
+              </li>
+              <li>
+                arT | Andrei Piovezan
+              </li>
+              <li>
+                kscerato | Kaike Cerato
+              </li>
+              <li>
+                yuurih | Yuri Santos
+              </li>
+            </ul>
+          </div>
+        </div><br>
+      </main>
+    </div>
+    <div class = "row">
+      <footer class = "col-sm-12 bg-secondary text-white"><br>
+        <p class = "text-center">Powered by Nothing</p><br>
+      </footer>
+    </div>
+  <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src = "script.js"></script>
+  </div>
+</body>
+
+</html>
