@@ -341,7 +341,7 @@ function passwordRequirement()
 function phoneRequirement() 
 {
   var x = document.getElementById("phone").value;
-  if(x.match(/^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})/)) 
+  if(x.match(/^\(?([0-9]{3})\)?[-]?([0-9]{3})?[-]?([0-9]{4})/)) 
   {
     return true;
   }
