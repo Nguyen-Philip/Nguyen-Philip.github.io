@@ -196,7 +196,7 @@ function loadEarnings()
   document.getElementById("LeaguePlayers").appendChild(createList(leagueP));
 }
 
-function removeListForSorting(id)
+function removeListF(id)
 {
     document.getElementById(id).appendChild(removeList(id));
 }
