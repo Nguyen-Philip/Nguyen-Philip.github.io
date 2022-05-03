@@ -242,7 +242,7 @@ function showInput()
   document.getElementById("display2").innerHTML = document.getElementById("email").value;
   document.getElementById("display3").innerHTML = document.getElementById("username").value;
   document.getElementById("display4").innerHTML = document.getElementById("password").value;
-  document.getElementById("display5").innerHTML = document.getElementById("phone").value;
+  document.getElementById("display5").innerHTML = document.getElementById("phoneNumber").value;
 }
 
 function getData() 
@@ -252,14 +252,14 @@ function getData()
   var email = document.getElementById("email").value;
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
-  var phone = document.getElementById("phone").value;
+  var phoneNumber = document.getElementById("phoneNumber").value;
 
   localStorage.setItem("textValue", fname);
   localStorage.setItem("textValue1", lname);
   localStorage.setItem("textValue2", email);
   localStorage.setItem("textValue3", username);
   localStorage.setItem("textValue4", password);
-  localStorage.setItem("textValue5", phone);
+  localStorage.setItem("textValue5", phoneNumber);
 }
 
 function addValues() 
@@ -340,7 +340,7 @@ function passwordRequirement()
 
 function phoneRequirement() 
 {
-  var x = document.getElementById("phone").value;
+  var x = document.getElementById("phoneNumber").value;
   if(x.match(/^\(?([0-9]{3})\)?[-]?([0-9]{3})?[-]?([0-9]{4})/)) 
   {
     return true;
